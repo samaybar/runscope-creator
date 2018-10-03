@@ -6,8 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samaybar/runscope-creator.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+  	"url": "https://github.com/samaybar/runscope-creator/issues"
+  },
+  "homepage": "https://github.com/samaybar/runscope-creator#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "bunyan": "^1.8.12",
