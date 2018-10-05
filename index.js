@@ -4,7 +4,7 @@ const axios = require('axios');
 const uuidv4 = require('uuid/v4');
 const log = require("./lib/helpers/logger");
 const settings = require('./settings.js');
-const tests = require('./tests2.js');
+const tests = require('./tests.js');
 
 let {apikey} = settings;
 
