@@ -4,7 +4,7 @@ const axios = require('axios');
 const uuidv4 = require('uuid/v4');
 const log = require("./lib/helpers/logger");
 const settings = require('./settings.js');
-const tests = require('./tests.js');
+const tests = require('./tests2.js');
 
 let {apikey} = settings;
 
@@ -46,11 +46,11 @@ async function createTest(myUUID, bucket,definition,steps) {
 		let newTestDefaultEnviornment = newTestData.default_environment_id
 		
 
-		define test steps
+		//define test steps
 		let modifyTestEndpoint = `${createTestEndpoint}/${newTestID}`;
 		let payload = {"steps":steps};
 		let newTestSteps = await putRunscope(modifyTestEndpoint,payload);
-		log.debug(`${newTestID}: ${newTestSteps.data.meta.status} - ${myUUID}`);
+		log.info(`${newTestID}: ${newTestSteps.data.meta.status} - ${myUUID}`);
 
 	} catch (e) {
 		log.warn(e);
